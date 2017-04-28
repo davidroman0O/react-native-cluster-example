@@ -28,7 +28,7 @@ export default class App extends React.Component {
               color: "white"
             }}
           >  
-            React Native Example Google Map with cluster
+            Simple example for React Native Example and Clusters
           </Text>
         </View>
         <Map
