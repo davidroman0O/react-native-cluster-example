@@ -16,7 +16,7 @@ export default class App extends React.Component {
         <View
           style={{
             height: 80,
-            backgroundColor: "violet",
+            backgroundColor: "blue",
           }}
         >
           <Text
@@ -24,7 +24,7 @@ export default class App extends React.Component {
               alignSelf: 'center',
               textAlign: "center",
               height: 50,
-              marginTop: 50,
+              marginTop: 35,
               color: "white"
             }}
           >  

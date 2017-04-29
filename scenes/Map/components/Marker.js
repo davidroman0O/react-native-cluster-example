@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 import Expo from 'expo';
 const offset_map_small = 0.0001;
+import ImageMarker from '../../../assets/marker.png'
 
 export default class Marker extends React.Component {
 
@@ -76,37 +77,35 @@ export default class Marker extends React.Component {
         }}
         onPress={this.onPress.bind(this)}
       >
+        <Image
+         style={{
+            tintColor: this.state.colorByCategory[category],
+          }}
+          source={ImageMarker}
+        />
         <View
           style={{
-            width: size,
-            height: size,
-            backgroundColor: this.state.colorByCategory[category],
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
-          <View
+          <Text
             style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
+              fontSize: 10,
+              color: "white",
+              textAlign: "center",
             }}
           >
-            <Text
-              style={{
-                fontSize: 10,
-                color: "white",
-                textAlign: "center",
-              }}
-            >
-              {
-                text
-              }
-            </Text>
-          </View>
+            {
+              text
+            }
+          </Text>
         </View>
       </Expo.MapView.Marker>
     );
